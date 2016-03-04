@@ -13,6 +13,7 @@
 		CECBE7B91C86444F00659C28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECBE7B71C86444F00659C28 /* Main.storyboard */; };
 		CECBE7BB1C86444F00659C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECBE7BA1C86444F00659C28 /* Assets.xcassets */; };
 		CECBE7BE1C86444F00659C28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECBE7BC1C86444F00659C28 /* LaunchScreen.storyboard */; };
+		CECBE7CC1C86459000659C28 /* TwitterSafariViewControllerAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = CECBE7CB1C86459000659C28 /* TwitterSafariViewControllerAuth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		CECBE7BA1C86444F00659C28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CECBE7BD1C86444F00659C28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECBE7BF1C86444F00659C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECBE7CA1C86459000659C28 /* TwitterSafariViewControllerAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterSafariViewControllerAuth.h; sourceTree = "<group>"; };
+		CECBE7CB1C86459000659C28 /* TwitterSafariViewControllerAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterSafariViewControllerAuth.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		CECBE7A21C86444F00659C28 = {
 			isa = PBXGroup;
 			children = (
+				CECBE7C91C86459000659C28 /* TwitterSafariViewControllerAuth */,
 				CECBE7AD1C86444F00659C28 /* TwitterAuthDemo */,
 				CECBE7AC1C86444F00659C28 /* Products */,
 			);
@@ -77,6 +81,16 @@
 				CECBE7AF1C86444F00659C28 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CECBE7C91C86459000659C28 /* TwitterSafariViewControllerAuth */ = {
+			isa = PBXGroup;
+			children = (
+				CECBE7CA1C86459000659C28 /* TwitterSafariViewControllerAuth.h */,
+				CECBE7CB1C86459000659C28 /* TwitterSafariViewControllerAuth.m */,
+			);
+			name = TwitterSafariViewControllerAuth;
+			path = ../TwitterSafariViewControllerAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +165,7 @@
 			files = (
 				CECBE7B61C86444F00659C28 /* ViewController.m in Sources */,
 				CECBE7B31C86444F00659C28 /* AppDelegate.m in Sources */,
+				CECBE7CC1C86459000659C28 /* TwitterSafariViewControllerAuth.m in Sources */,
 				CECBE7B01C86444F00659C28 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +315,7 @@
 				CECBE7C41C86444F00659C28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
