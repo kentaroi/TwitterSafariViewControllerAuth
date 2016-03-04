@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  TwitterAuthDemo
+//  Test
 //
 //  Created by Daniel Khamsing on 3/1/16.
 //  Copyright © 2016 Daniel Khamsing. All rights reserved.
@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 @end
 
