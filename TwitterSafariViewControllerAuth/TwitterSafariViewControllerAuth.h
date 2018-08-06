@@ -44,6 +44,13 @@
 
 /**
  Present Twitter OAuth login controller (Safari View Controller).
+ @param screenName Screen name blank in login page will be filled in with the screenName.
+ @param controller Controller to present Twitter OAuth login controller from.
+ */
+- (void)presentOAuthLoginWithScreenName:(NSString *)screenName fromController:(UIViewController *)controller;
+
+/**
+ Present Twitter OAuth login controller (Safari View Controller).
  @param controller Controller to present Twitter OAuth login controller from.
  */
 - (void)presentOAuthLoginFromController:(UIViewController *)controller;

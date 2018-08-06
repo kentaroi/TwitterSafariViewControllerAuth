@@ -119,7 +119,7 @@ static NSString * const tsvca_POST  = @"POST";
     }];
 }
 
-- (void)getAuthUrlWithCompletion:(void (^)(NSURL *))completion;
+- (void)getAuthUrlWithScreenName:(NSString *)screenName completion:(void (^)(NSURL *))completion;
 {
     [self postUrlString:api_url_oauth_request_token token:nil secret:nil verifier:nil completion:^(NSData *data) {
         NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
@@ -127,6 +127,8 @@ static NSString * const tsvca_POST  = @"POST";
         NSDictionary *parameters = [self parseUrlQueryString:string];
         NSString *token = parameters[key];
         NSString *urlString = [NSString stringWithFormat:@"%@?%@=%@", api_url_oauth_authenticate, key, token];
+        if (screenName)
+            urlString = [NSString stringWithFormat:@"%@&screen_name=%@", urlString, screenName];
         NSURL *url = [NSURL URLWithString:urlString];
         
         if (completion) {
@@ -135,12 +137,17 @@ static NSString * const tsvca_POST  = @"POST";
     }];
 }
 
-- (void)presentOAuthLoginFromController:(UIViewController *)controller;
+- (void)presentOAuthLoginWithScreenName:(NSString *)screenName fromController:(UIViewController *)controller;
 {
-    [self getAuthUrlWithCompletion:^(NSURL *url) {
+    [self getAuthUrlWithScreenName:screenName completion:^(NSURL *url) {
         self.safariViewController = [[SFSafariViewController alloc] initWithURL:url entersReaderIfAvailable:NO];
         [controller presentViewController:self.safariViewController animated:YES completion:nil];
     }];
+}
+
+- (void)presentOAuthLoginFromController:(UIViewController *)controller;
+{
+    [self presentOAuthLoginWithScreenName:nil fromController:controller];
 }
 
 #pragma mark - Private
