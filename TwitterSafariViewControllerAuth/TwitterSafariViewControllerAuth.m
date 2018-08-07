@@ -132,7 +132,7 @@ static NSString * const tsvca_POST  = @"POST";
         NSURL *url = [NSURL URLWithString:urlString];
         
         if (completion) {
-            completion(url);
+            dispatch_async(dispatch_get_main_queue(), ^{ completion(url); });
         }
     }];
 }
