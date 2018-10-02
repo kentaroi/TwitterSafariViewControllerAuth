@@ -206,7 +206,7 @@ static NSString * const tsvca_POST  = @"POST";
         }
         else {
             NSError *jsonError;
-            id json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+            id json = data != nil ? [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError] : nil;
             NSLog(@"post url string json error = %@", json);
         }
     }];
